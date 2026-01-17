@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Taxonomy Overview](figures/graphical_abstract.png)
+![Taxonomy Overview](graphical_abstract.png)
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
