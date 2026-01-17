@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Taxonomy Overview](graphical_abstract.png)
+<img src="graphical_abstract.png" alt="Taxonomy Overview" width="800">
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -106,7 +106,7 @@ The taxonomy decomposes each method into a tuple `(k, i, a)` where:
 
 We provide an **automated GPT-based classifier** to position new methods within the K×I×A design space.
 
-### 🔗 **[Try the Classifier](https://chat.openai.com/g/g-XXXXXXXXXX)**
+### 🔗 **[Try the Classifier]([https://chat.openai.com/g/g-XXXXXXXXXX](https://chat.openai.com/g/g-XXXXXXXXXX](https://chatgpt.com/g/g-696bce6c73e481a4a827e255a04cd691-3d-ct-generation-taxonomy-classifier))**
 
 **How to use:**
 1. Upload your paper (PDF format)
