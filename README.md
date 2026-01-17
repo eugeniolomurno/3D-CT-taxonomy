@@ -126,115 +126,6 @@ Primary Classification: (K2, I2, A1)
 - A1: VQ-VAE single-stage latent generation
 Overall Confidence: High (87%)
 ```
-
----
-
-## 📑 Comprehensive Method Overview
-
-We systematically classify **25 recent methods** (2023-2025) across the K×I×A space:
-
-| Method | K | I | A | Key Innovation |
-|--------|---|---|---|----------------|
-| **MAISI** | K2 | I2 | A1 | ControlNet feature injection for multi-organ synthesis |
-| **GenerateCT** | K1 | I1, I2 | A2 | Text-conditional generation with cascaded refinement |
-| **Report2CT** | K1 | I2, I3 | A1 | Multi-encoder latent diffusion with CFG |
-| **Med-LVDM** | K3 | I2 | A1 | Cross-modal MRI→CT via latent concatenation |
-| **Cascaded-3D** | K4 | I2 | A2 | Demographic-conditioned blueprint→residual pipeline |
-| ... | ... | ... | ... | ... |
-
-📄 **[Full Table 5 with detailed classifications](docs/table5_full.md)**
-
----
-
-## 🚀 Quick Start
-
-### Installation
-```bash
-# Clone repository
-git clone https://github.com/[your-username]/3D-CT-taxonomy.git
-cd 3D-CT-taxonomy
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### Classify a New Paper
-```python
-from classifier import TaxonomyClassifier
-
-# Initialize classifier
-classifier = TaxonomyClassifier()
-
-# Classify paper
-result = classifier.classify("path/to/paper.pdf")
-
-# Print classification
-print(f"Classification: {result['K']}, {result['I']}, {result['A']}")
-print(f"Confidence: {result['confidence']}")
-print(f"Rationale: {result['rationale']}")
-```
-
-### Explore the Design Space
-```python
-from visualization import plot_design_space
-
-# Load classified methods
-methods = load_table5()
-
-# Visualize K×I×A distribution
-plot_design_space(methods, save_path="design_space.png")
-```
-
----
-
-## 📂 Repository Structure
-```
-3D-CT-taxonomy/
-├── README.md                 # This file
-├── paper.pdf                 # Full survey paper
-├── figures/
-│   ├── figure1_taxonomy.png  # K×I×A design space
-│   └── figure2_distribution.png
-├── data/
-│   ├── table5_methods.csv    # All 25 classified methods
-│   └── references/           # BibTeX for all papers
-├── classifier/
-│   ├── gpt_classifier.py     # GPT-based automated classifier
-│   └── taxonomy_rules.py     # Classification logic
-├── docs/
-│   ├── taxonomy_guide.md     # Detailed axis descriptions
-│   ├── table5_full.md        # Extended Table 5
-│   └── examples.md           # Classification examples
-└── requirements.txt
-```
-
----
-
-## 🎯 Open Research Directions
-
-Based on design space analysis, we identify high-potential underexplored regions:
-
-### 1. **Demographic Conditioning (K4)**
-- Only 6% of methods despite minimal annotation overhead
-- Opportunity: Population-aware synthesis (age-related atrophy, sex-specific morphology)
-
-### 2. **Pre-Generative Alignment Beyond Text (I1)**
-- Currently confined to vision-language pairs
-- Opportunity: Geometric-demographic alignment (K2–K4), cross-modal correspondence (K3–K3)
-
-### 3. **Joint Structural Modeling (I4)**
-- Limited to image-mask pairs
-- Opportunity: CT-MRI co-generation, volume-text paired synthesis
-
-### 4. **Multimodal Integration**
-- Text-exemplar (K1+K3): Ground semantics in structural priors
-- Text-demographic (K1+K4): Population-specific semantic generation
-
-### 5. **Architectural Diversification**
-- Fixed-transform (A4) beyond exemplar translation
-- Minimal sufficient geometric priors
-- Hybrid integration strategies (I1+I2+I3)
-
 ---
 
 ## 📖 Citation
@@ -261,8 +152,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This work is supported by the FAIR (Future Artificial Intelligence Research) project, funded by the NextGenerationEU program within the PNRR-PE-AI scheme (M4C2, investment 1.3, line on Artificial Intelligence).
 
-We thank the authors of all 25 methods in Table 5 for their foundational contributions to knowledge-guided 3D CT generation.
-
 ---
 
 ## 📬 Contact
@@ -271,8 +160,6 @@ For questions or collaboration:
 - **Francesca Pia Panaccione**: francescapia.panaccione@polimi.it
 - **Eugenio Lomurno**: eugenio.lomurno@polimi.it
 - **Matteo Matteucci**: matteo.matteucci@polimi.it
-
-**GitHub Issues**: For bug reports or feature requests, please open an issue.
 
 ---
 
