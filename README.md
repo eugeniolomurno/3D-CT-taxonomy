@@ -26,24 +26,37 @@ We introduce the first taxonomy that organizes generative methods not by archite
 
 ## 📐 The Design Space ($K \times I \times A$)
 
-We factorize each method into a tuple $(k, i, a)$ based on three orthogonal axes:
+We factorize each method into a tuple $(k, i, a)$ based on three orthogonal axes.
 
-| Axis | Category | Definition |
+### **Axis K: External Knowledge**
+*What type of information guides the generation?*
+
+| Symbol | Category | Definition |
 | :---: | :--- | :--- |
-| **K** | **K1 - Textual** | Natural language descriptions (reports, prompts). |
-| *External* | **K2 - Geometric** | Spatial constraints (segmentation masks, landmarks). |
-| *Knowledge* | **K3 - Exemplar** | Reference volumes (e.g., MRI $\to$ CT). |
-| | **K4 - Attribute** | Non-spatial metadata (demographics, labels). |
-| | | |
-| **I** | **I1 - Alignment** | Embedding alignment (e.g., CLIP). |
-| *Integration* | **I2 - Model-Based** | Direct architectural injection (Cross-Attn, ControlNet). |
-| *Paradigm* | **I3 - Inference-Time** | Sampling guidance (e.g., Classifier-Free Guidance). |
-| | **I4 - Joint** | Joint probability modeling $p(x, k)$. |
-| | | |
-| **A** | **A1 - Single-Stage** | Latent space synthesis (LDM, VQ-VAE). |
-| *Generative* | **A2 - Cascaded** | Multi-stage refinement (Coarse $\to$ Fine). |
-| *Architecture* | **A3 - Autoregressive** | Sequential token/slice generation. |
-| | **A4 - Transform** | Fixed spectral/wavelet domain generation. |
+| **K1** | **Textual** | Natural language descriptions (reports, prompts). |
+| **K2** | **Geometric** | Spatial constraints (segmentation masks, landmarks). |
+| **K3** | **Exemplar** | Reference volumes from other modalities (e.g., MRI $\to$ CT). |
+| **K4** | **Attribute** | Non-spatial metadata (demographics, class labels). |
+
+### **Axis I: Knowledge Integration**
+*How is the guidance injected into the model?*
+
+| Symbol | Category | Definition |
+| :---: | :--- | :--- |
+| **I1** | **Alignment** | Embedding space alignment (e.g., CLIP). |
+| **I2** | **Model-Based** | Direct architectural injection (Cross-Attn, ControlNet). |
+| **I3** | **Inference-Time** | Sampling-time guidance (e.g., Classifier-Free Guidance). |
+| **I4** | **Joint** | Joint probability modeling $p(x, k)$. |
+
+### **Axis A: Generative Architecture**
+*What is the backbone synthesis mechanism?*
+
+| Symbol | Category | Definition |
+| :---: | :--- | :--- |
+| **A1** | **Single-Stage** | Latent space synthesis (LDM, VQ-VAE). |
+| **A2** | **Cascaded** | Multi-stage refinement (Coarse $\to$ Fine). |
+| **A3** | **Autoregressive** | Sequential token/slice generation. |
+| **A4** | **Transform** | Fixed spectral/wavelet domain generation. |
 
 ---
 
@@ -69,13 +82,14 @@ Unsure where your method fits? We provide an automated tool to position your wor
 
 ## 📖 Citation
 
-bibtex
+```bibtex
 @article{panaccione2025taxonomy,
   title={Knowledge-Guided 3D CT Generation: A Conditioning-Centric Taxonomy},
   author={Panaccione, Francesca Pia and Lomurno, Eugenio and Matteucci, Matteo},
   journal={arXiv preprint arXiv:XXXX.XXXXX},
   year={2025}
 }
+```
 
 ---
 
@@ -100,10 +114,5 @@ For questions or collaboration:
 
 ---
 
-<div align="center">
-
-**[⬆ Back to Top](#knowledge-guided-3d-ct-generation-a-conditioning-centric-taxonomy)**
-
 Made with ❤️ at Politecnico di Milano
 
-</div>```
