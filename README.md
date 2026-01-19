@@ -6,7 +6,7 @@
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Classification Tool](https://img.shields.io/badge/GPT-Classifier-00A67E.svg)]([https://chat.openai.com/g/g-XXXXXXXXXX](https://chatgpt.com/g/g-696bce6c73e481a4a827e255a04cd691-3d-ct-generation-taxonomy-classifier))
+[![Gemini Classifier](https://img.shields.io/badge/Gemini-Classifier-8E75B2.svg)](https://gemini.google.com/gem/1NveJGT-FX98ddXRWIsfajtC4X1OnI-4Y?usp=sharing)
 
 *A comprehensive survey introducing the first conditioning-centric taxonomy for knowledge-guided 3D CT generation*
 
