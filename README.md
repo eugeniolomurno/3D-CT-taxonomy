@@ -81,7 +81,6 @@ The taxonomy decomposes each method into a tuple `(k, i, a)` where:
 ## 📊 Literature Trends
 
 ![Distribution Analysis](figures/summary.png)
-<img src="figures/summary.png" alt="Taxonomy Summary" width="600">
 
 ### Key Findings
 
@@ -107,7 +106,7 @@ The taxonomy decomposes each method into a tuple `(k, i, a)` where:
 
 We provide an **automated GPT-based classifier** to position new methods within the K×I×A design space.
 
-### 🔗 **[Try the Classifier]([https://chat.openai.com/g/g-XXXXXXXXXX](https://chat.openai.com/g/g-XXXXXXXXXX](https://chatgpt.com/g/g-696bce6c73e481a4a827e255a04cd691-3d-ct-generation-taxonomy-classifier))**
+### 🔗 **[Try the Classifier](https://gemini.google.com/gem/1NveJGT-FX98ddXRWIsfajtC4X1OnI-4Y?usp=sharing)**
 
 **How to use:**
 1. Upload your paper (PDF format)
