@@ -2,6 +2,107 @@
 
 <div align="center">
 
+<a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b.svg" alt="Paper"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
+<a href="https://gemini.google.com/gem/1NveJGT-FX98ddXRWIsfajtC4X1OnI-4Y?usp=sharing"><img src="https://img.shields.io/badge/Tools-Classifier-8E75B2.svg" alt="Gemini Classifier"></a>
+
+**Francesca Pia Panaccione, Eugenio Lomurno, Matteo Matteucci**
+*Politecnico di Milano, 2025*
+
+<br>
+<img src="figures/graphical_abstract.png" alt="Taxonomy Overview" width="800">
+<br>
+
+</div>
+
+## 📌 Abstract
+This repository contains the official resources for the survey **"Knowledge-Guided 3D CT Generation: A Conditioning-Centric Taxonomy"**. We propose the first taxonomy enabling the systematic positioning of heterogeneous generative methods along three orthogonal axes: **External Knowledge (K)**, **Integration Paradigm (I)**, and **Generative Architecture (A)**.
+
+This factorization defines an explicit **$K \times I \times A$ design space**, facilitating the identification of dominant paradigms and underexplored research directions.
+
+---
+
+## 📐 The K-I-A Taxonomy
+
+We decompose each generation method into a tuple $(k, i, a)$ based on the following axes:
+
+### Axis K: External Knowledge
+*What type of information guides the generation?*
+
+| Category | Definition | Representative Methods |
+| :--- | :--- | :--- |
+| **K1 - Textual** | Natural language descriptions (reports, prompts). | *GenerateCT, Report2CT* |
+| **K2 - Geometric** | Spatial constraints (segmentation masks, landmarks). | *MAISI, LAND, MedLoRD* |
+| **K3 - Exemplar** | Reference volumes from other modalities (e.g., MRI). | *Med-LVDM, 3DLDM* |
+| **K4 - Attribute** | Non-spatial metadata (demographics, class labels). | *Cascaded-3D, Surf2CT* |
+
+### Axis I: Knowledge Integration
+*How is the guidance injected into the model?*
+
+| Category | Definition | Representative Methods |
+| :--- | :--- | :--- |
+| **I1 - Alignment** | Alignment of embeddings in a joint latent space (e.g., CLIP). | *Text-to-CT* |
+| **I2 - Model-Based** | Direct injection via architectural blocks (Cross-Attn, ControlNet). | *MAISI, DiffTumor* |
+| **I3 - Inference-Time** | Guidance applied only during the sampling process. | *TRACE, Text2CT* |
+| **I4 - Joint Modeling** | Modeling the joint probability $p(x, k)$. | *MedGen3D, LabelG* |
+
+### Axis A: Generative Architecture
+*What is the backbone synthesis mechanism?*
+
+| Category | Definition | Representative Methods |
+| :--- | :--- | :--- |
+| **A1 - Single-Stage Latent** | Synthesis within a compressed latent space (LDM, VQ-VAE). | *MAISI, LAND* |
+| **A2 - Cascaded** | Multi-stage generation (Coarse $\to$ Fine). | *GenerateCT, MedSyn* |
+| **A3 - Autoregressive** | Sequential generation (slice-by-slice or token-by-token). | *TRACE, CTFlow* |
+| **A4 - Fixed-Transform** | Generation in fixed spectral/wavelet domains. | *cWDM, 3D-WLDM* |
+
+---
+
+## 📊 Analysis & Trends
+
+Our analysis of 25+ recent methods reveals significant clustering within the design space.
+
+<div align="center">
+<img src="figures/summary.png" alt="Distribution Analysis" width="700">
+</div>
+
+**Key Findings:**
+* **Dominant Paradigm ($K2, I2, A1$):** 44% of methods rely on geometric conditioning (masks) integrated via model-based attention in single-stage latent diffusion models.
+* **Sparse Regions:** Demographic conditioning ($K4$) and Joint Modeling ($I4$) remain underexplored (6% and 10% respectively).
+* **Correlation:** Textual conditioning ($K1$) is almost exclusively paired with Inference-Time guidance ($I3$).
+
+---
+
+## 🤖 Method Classifier
+
+We provide an automated tool to position new research within the $K \times I \times A$ design space.
+
+* **Tool:** [Gemini-based Classifier](https://gemini.google.com/gem/1NveJGT-FX98ddXRWIsfajtC4X1OnI-4Y?usp=sharing)
+* **Input:** PDF Paper or Abstract.
+* **Output:** Classification tuple $(k, i, a)$ with confidence scores and rationale.
+
+> **Example Output:**
+> * **Primary:** $(K2, I2, A1)$
+> * **Rationale:** Uses segmentation masks ($K2$) injected via ControlNet ($I2$) into a Latent Diffusion Model ($A1$).
+
+---
+
+## 📖 Citation
+
+If you use this taxonomy in your research, please cite:
+
+```bibtex
+@article{panaccione2025taxonomy,
+  title={Knowledge-Guided 3D CT Generation: A Conditioning-Centric Taxonomy},
+  author={Panaccione, Francesca Pia and Lomurno, Eugenio and Matteucci, Matteo},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2025}
+}
+
+<!-- # Knowledge-Guided 3D CT Generation: A Conditioning-Centric Taxonomy
+
+<div align="center">
+
 <img src="figures/graphical_abstract.png" alt="Taxonomy Overview" width="600">
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
@@ -169,4 +270,4 @@ For questions or collaboration:
 
 Made with ❤️ at Politecnico di Milano
 
-</div>
+</div> -->
